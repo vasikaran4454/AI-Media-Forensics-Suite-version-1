@@ -1,14 +1,5 @@
-# Optional — ONLY for local testing of the pretrained AI-detector signal
-# (utils/ai_detector.py). NOT included in requirements.txt on purpose —
-# torch + transformers pull ~300MB+ of weights on first run and can
-# exceed free-tier cloud RAM/disk limits (e.g. Streamlit Community Cloud).
-#
-# Install locally with:
-#   pip install -r requirements-local.txt
-#
-# Without this, the app still runs fine — utils/ai_detector.py degrades
-# gracefully and the ensemble falls back to the GRU model + frequency
-# heuristic only (see predict_face() in utils/deepfake_model.py).
-
 torch
+torchvision
 transformers
+opencv-python==4.13.0.92
+reportlab
